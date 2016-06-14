@@ -1,0 +1,396 @@
+/*reset style*/
+html, body, div, span, i, p, a, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+}
+body {
+  line-height: 1;
+  background: #f9fcff;
+  font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Meiryo UI', sans-serif;
+  /*font-size: 16px;*/
+}
+
+input {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+/*sign style*/
+
+.icon_sign {
+  background: #4994e2;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.sign {
+  max-width: 440px;
+  min-width: 300px;
+  margin: 50px auto 0px auto;
+  color: #535d68;
+}
+
+.form {
+  background: #fff;
+  padding: 0 30px;
+  position: relative;
+  box-shadow: 0px 2px 18px 0px rgba(40, 55, 77, 0.075);
+  border-radius: 5px;
+  border: 1px solid #e2e9f0;
+}
+
+.form:before, .form:after {
+  z-index: -1; 
+  position: absolute; 
+  content: "";
+  bottom: 8px;
+  left: 5px;
+  width: 50%; 
+  height: 45px;
+  max-width:300px;
+  box-shadow: 0px 4px 20px 0px rgba(40, 55, 77, 0.075),4px 10px 20px 0px rgba(40, 55, 77, 0.075);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.form:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 5px;
+  left: auto;
+}
+
+.button {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.sign .row {
+  position: relative;
+  height: 65px;
+  border-bottom: 1px solid #dde1e7;
+  border-radius: 1px;
+  -webkit-transition: border-color ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s;
+  transition: border-color ease-in-out .15s;
+}
+
+.sign .row.active {
+  border-bottom: 1px solid #4994e2;
+  -webkit-transition: border-color ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s;
+  -ms-transition: border-color ease-in-out .15s;
+  transition: border-color ease-in-out .15s;
+}
+
+.input-bar {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 1px;
+}
+
+.input-bar:before, 
+.input-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: -1px;
+    position: absolute;
+    background: #4994e2;
+    border-radius: 1px;
+    -webkit-transition: all .28s cubic-bezier(.4,0,.2,1);
+    -moz-transition: all .28s cubic-bezier(.4,0,.2,1);
+    -o-transition: all .28s cubic-bezier(.4,0,.2,1);
+    -ms-transition: all .28s cubic-bezier(.4,0,.2,1);
+    transition: all .28s cubic-bezier(.4,0,.2,1);
+  }
+
+.input-bar:before{
+  left: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-bar:after{
+  right: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+input:focus~.input-bar:before {
+    left: 0%;
+    width: 51%;
+}
+
+input:focus~.input-bar:after {
+    right: 0%;
+    width: 50%;
+}
+
+.sign .row.name input,
+.sign .row.email input,
+.sign .row.password input {
+  border: 0 none;
+  font-size: 16px;
+  line-height: 18px;   
+  padding: 12px 10px 10px 8px;
+  width: calc(100% - 70px);
+}
+
+.sign .row.submit {
+  border-bottom: none;
+}
+.sign .row.submit {
+  padding: 34px 0 36px;
+  margin: 0 auto;
+  height: 46px;
+}
+
+.sign .row.submit .button {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 10px;
+  border-radius: 3px;
+  height: 46px;
+  font-weight: 500;
+}
+
+.sign .row .icon {
+  position: relative;
+  top: 6px;
+}
+
+.sign .row .icon {
+  display: inline-block;
+  margin: 27px 10px 0px 10px;
+}
+
+.button {
+  -webkit-transition: 0.1s -webkit-transform ease-in-out;
+  -moz-transition: 0.1s -moz-transform ease-in-out;
+  -o-transition: 0.1s -o-transform ease-in-out;
+  -ms-transition: 0.1s -ms-transform ease-in-out;
+  transition: 0.1s transform ease-in-out;
+}
+
+.button:active {
+  -webkit-transform: scale(.99, .99);
+  -moz-transform: scale(.99, .99);
+  -o-transform: scale(.99, .99);
+  -ms-transform: scale(.99, .99);
+  transform: scale(.99, .99)
+}
+
+.button.blue {
+  border: 0 none;
+  background-color: #4994e2;
+  color: #fff;
+}
+
+.button.blue:hover {
+  background-color: #4f9cec;
+}
+
+.button {
+  background-color: #4980E3;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  padding: 0.625rem 0;
+  border: 1px solid #006DE1;
+  text-align: center;
+  width: 100%;
+}
+
+.spinner {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 12px;
+}
+.spinner span {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+.spinner span:before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+}
+.spinner span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.spinner span:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.spinner span:nth-child(3) {
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.spinner span:nth-child(4) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.spinner span:nth-child(5) {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.spinner span:nth-child(6) {
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.spinner span:nth-child(7) {
+  -moz-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+.spinner span:nth-child(8) {
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.spinner span:first-child:before {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+}
+.spinner span:last-child:before {
+  width: 3.4px;
+  height: 3.4px;
+  border-radius: 3.4px;
+  -webkit-border-radius: 3.4px;
+  -moz-border-radius: 3.4px;
+  -o-border-radius: 3.4px;
+  -ms-border-radius: 3.4px;
+}
+
+.pulse {
+  -webkit-animation: spin 1s infinite steps(8);
+  -moz-animation: spin 1s infinite steps(8);
+  -o-animation: spin 1s infinite steps(8);
+  -ms-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+}
+
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -ms-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.spinner-circle {
+  display: none;
+  position: absolute;
+  right: 59%;
+  top: 50px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -o-border-radius: 500px;
+  -ms-border-radius: 500px;
+}
+
+
+.spinner-circle:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid rgba(73, 148, 226, 0.39);
+  border-right: 15px solid transparent;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+}
+
+.button:focus~.spinner-circle {
+  display: inline-block;
+}

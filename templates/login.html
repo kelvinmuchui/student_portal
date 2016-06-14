@@ -2,13 +2,29 @@
      
 {% extends "base.html" %}
 {% block content %}
-  <h1>Please login</h1>
-      <br>
-      <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="{{
+ <div class="sign signin-page">
+ <form class="form form-horizontal" action="" method="post">
+  <div class="row email">
+   <span class="icon email"><i class="icon-email-blue icon_sign" icon="email"></i></span>
+   <input type="text" placeholder="Username" name="username" value="{{
           request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
-        <input class="btn btn-default" type="submit" value="Login">
-      </form>
+   <span class="input-bar"></span>
+   </div>
+  
+  <div class="row password">
+   <span class="icon lock">
+    <i class="icon-lock-gray icon_sign" icon="lock"></i>
+    </span>
+    <input class="required" type="password" name="password" placeholder="password" value="{{
+          request.form.password }}"required>
+    <span class="input-bar"></span>
+  </div>
+  
+  <div class="row submit">
+   <input type="submit" class="row button big blue" value="Sign In" readonly>
+   <span class="spinner-circle spin ">
+ </div>
+    
+ </form>
+</div>
 {% endblock %}
